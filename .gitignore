@@ -4,3 +4,4 @@
 *.xlsx
 venv
 sensors.db
+__pycache*
