@@ -42,7 +42,6 @@ def populate(quantidade=10):
     session = get_session()
     max_try = 5
     while quantidade > 0:
-        print(max_try)
         try:
             novo_sensor = Sensor(identificador=randrange(10000,100000), ip=generate_ipv4(), humidade_max=randrange(0,100),humidade_min=randrange(0,100), latitude=randrange(0,90), longitude=randrange(0,180))
             session.add(novo_sensor)

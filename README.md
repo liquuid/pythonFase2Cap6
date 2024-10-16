@@ -28,39 +28,42 @@
 
 ## 📁 Estrutura de pastas
 
-Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
+- <b>config</b>: Configurações.
+- <b>src</b>: Aqui fica o código fonte do projeto. 
 
-- <b>.github</b>: Nesta pasta ficarão os arquivos de configuração específicos do GitHub que ajudam a gerenciar e automatizar processos no repositório.
-
-- <b>assets</b>: aqui estão os arquivos relacionados a elementos não-estruturados deste repositório, como imagens.
-
-- <b>config</b>: Posicione aqui arquivos de configuração que são usados para definir parâmetros e ajustes do projeto.
-
-- <b>document</b>: aqui estão todos os documentos do projeto que as atividades poderão pedir. Na subpasta "other", adicione documentos complementares e menos importantes.
-
-- <b>scripts</b>: Posicione aqui scripts auxiliares para tarefas específicas do seu projeto. Exemplo: deploy, migrações de banco de dados, backups.
-
-- <b>src</b>: Todo o código fonte criado para o desenvolvimento do projeto ao longo das 7 fases.
-
-- <b>README.md</b>: arquivo que serve como guia e explicação geral sobre o projeto (o mesmo que você está lendo agora).
 
 ## 🔧 Como executar o código
 
-*Acrescentar as informações necessárias sobre pré-requisitos (IDEs, serviços, bibliotecas etc.) e instalação básica do projeto, descrevendo eventuais versões utilizadas. Colocar um passo a passo de como o leitor pode baixar o seu código e executá-lo a partir de sua máquina ou seu repositório. Considere a explicação organizada em fase.*
+```
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+# altere o json em config/config.json
+python src/soilcli.py # para receber a lista de comandos
+
+# para gerar sensores aleatórios
+python src/soilcli.py populate --quantidade 10 
+
+# para adicionar um sensor
+python src/soilcli.py create
+
+# para remover um sensor
+python src/soilcli.py delete
+
+# para recolher os dados dos sensores, listando os ultimos valores do campo
+python src/soilcli.py get-data
+
+# para irrigar o setor, levando em conta as particularidades daquele solo, quantidade máxima de humidade suportada, mínima etc. Caso o valor esteja fora dos parâmetros configurados ele exibe um alerta.
+python src/soilcli.py irrigar
+
+
+```
 
 
 ## 🗃 Histórico de lançamentos
 
-* 0.5.0 - XX/XX/2024
-    * 
-* 0.4.0 - XX/XX/2024
-    * 
-* 0.3.0 - XX/XX/2024
-    * 
-* 0.2.0 - XX/XX/2024
-    * 
-* 0.1.0 - XX/XX/2024
-    *
+* 0.1.0 - 15/10/2024
+    
 
 ## 📋 Licença
 
